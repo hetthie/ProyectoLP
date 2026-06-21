@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+const int LIMITE = 3;
+
+void verificar(int x) {
+    switch (x) {
+        case 1:
+            cout << "Uno" << endl;
+            break;
+
+        case 2:
+            cout << "Dos" << endl;
+            break;
+
+        default:
+            cout << "Otro" << endl;
+            break;
+    }
+}
+
+int main() {
+    int numero = 0;
+    int intentos = 0;
+
+    cout << "Ingrese numero: ";
+    cin >> numero;
+
+    do {
+        intentos++;
+
+        if (numero != LIMITE || intentos > 5) {
+            numero = numero - 1;
+        } else {
+            numero = numero + 1;
+        }
+
+    } while (numero > 0);
+
+    verificar(numero);
+
+    cout << "Resultado final: " << numero << endl;
+
+    return 0;
+}
