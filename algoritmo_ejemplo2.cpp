@@ -25,7 +25,7 @@ int main() {
     } else {
         cout << "El numero es impar" << endl;
     }
-
+// Suma de los numeros desde 1 hasta el numero ingresado
     while (contador <= numero) {
         suma += contador;
         contador++;
