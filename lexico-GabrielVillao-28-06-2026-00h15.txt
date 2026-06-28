@@ -1,0 +1,253 @@
+============================================================
+ANALIZADOR LEXICO - C++
+Estudiante: GabrielVillao
+Fecha y hora: 28/06/2026 00:15:35
+============================================================
+
+CODIGO FUENTE ANALIZADO:
+------------------------------------------------------------
+// Algoritmo 2 de ejemplo para probar el analizador lexico
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero;
+    int contador = 1;
+    int suma = 0;
+    float promedio;
+    bool esPar = false;
+    char opcion = 'S';
+
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+
+    if (numero > 0 && numero <= 100) {
+        cout << "Numero dentro del rango" << endl;
+    } else {
+        cout << "Numero fuera del rango" << endl;
+    }
+
+    if (numero % 2 == 0) {
+        esPar = true;
+        cout << "El numero es par" << endl;
+    } else {
+        cout << "El numero es impar" << endl;
+    }
+// Suma de los numeros desde 1 hasta el numero ingresado
+    while (contador <= numero) {
+        suma += contador;
+        contador++;
+    }
+
+    promedio = suma / numero;
+
+    cout << "Suma: " << suma << endl;
+    cout << "Promedio: " << promedio << endl;
+
+    for (int i = 0; i < 3; i++) {
+        cout << "Iteracion: " << i << endl;
+    }
+
+    if (opcion == 'S' || opcion == 's') {
+        cout << "Proceso finalizado correctamente" << endl;
+    }
+
+    return 0;
+}
+------------------------------------------------------------
+
+TOKENS RECONOCIDOS (187):
+------------------------------------------------------------
+LINEA   TOKEN               VALOR
+------------------------------------------------------------
+2       HASH                #
+2       INCLUDE             include
+2       LT                  <
+2       IDENTIFIER          iostream
+2       GT                  >
+3       USING               using
+3       NAMESPACE           namespace
+3       STD                 std
+3       SEMICOLON           ;
+5       INT                 int
+5       IDENTIFIER          main
+5       LPAREN              (
+5       RPAREN              )
+5       LBRACE              {
+6       INT                 int
+6       IDENTIFIER          numero
+6       SEMICOLON           ;
+7       INT                 int
+7       IDENTIFIER          contador
+7       ASSIGN              =
+7       NUMBER_INT          1
+7       SEMICOLON           ;
+8       INT                 int
+8       IDENTIFIER          suma
+8       ASSIGN              =
+8       NUMBER_INT          0
+8       SEMICOLON           ;
+9       FLOAT               float
+9       IDENTIFIER          promedio
+9       SEMICOLON           ;
+10      BOOL                bool
+10      IDENTIFIER          esPar
+10      ASSIGN              =
+10      FALSE               false
+10      SEMICOLON           ;
+11      CHAR                char
+11      IDENTIFIER          opcion
+11      ASSIGN              =
+11      CHAR_LITERAL        'S'
+11      SEMICOLON           ;
+13      COUT                cout
+13      STREAM_OUT          <<
+13      STRING_LITERAL      "Ingrese un numero: "
+13      SEMICOLON           ;
+14      CIN                 cin
+14      STREAM_IN           >>
+14      IDENTIFIER          numero
+14      SEMICOLON           ;
+16      IF                  if
+16      LPAREN              (
+16      IDENTIFIER          numero
+16      GT                  >
+16      NUMBER_INT          0
+16      AND                 &&
+16      IDENTIFIER          numero
+16      LE                  <=
+16      NUMBER_INT          100
+16      RPAREN              )
+16      LBRACE              {
+17      COUT                cout
+17      STREAM_OUT          <<
+17      STRING_LITERAL      "Numero dentro del rango"
+17      STREAM_OUT          <<
+17      ENDL                endl
+17      SEMICOLON           ;
+18      RBRACE              }
+18      ELSE                else
+18      LBRACE              {
+19      COUT                cout
+19      STREAM_OUT          <<
+19      STRING_LITERAL      "Numero fuera del rango"
+19      STREAM_OUT          <<
+19      ENDL                endl
+19      SEMICOLON           ;
+20      RBRACE              }
+22      IF                  if
+22      LPAREN              (
+22      IDENTIFIER          numero
+22      MOD                 %
+22      NUMBER_INT          2
+22      EQ                  ==
+22      NUMBER_INT          0
+22      RPAREN              )
+22      LBRACE              {
+23      IDENTIFIER          esPar
+23      ASSIGN              =
+23      TRUE                true
+23      SEMICOLON           ;
+24      COUT                cout
+24      STREAM_OUT          <<
+24      STRING_LITERAL      "El numero es par"
+24      STREAM_OUT          <<
+24      ENDL                endl
+24      SEMICOLON           ;
+25      RBRACE              }
+25      ELSE                else
+25      LBRACE              {
+26      COUT                cout
+26      STREAM_OUT          <<
+26      STRING_LITERAL      "El numero es impar"
+26      STREAM_OUT          <<
+26      ENDL                endl
+26      SEMICOLON           ;
+27      RBRACE              }
+29      WHILE               while
+29      LPAREN              (
+29      IDENTIFIER          contador
+29      LE                  <=
+29      IDENTIFIER          numero
+29      RPAREN              )
+29      LBRACE              {
+30      IDENTIFIER          suma
+30      PLUS_ASSIGN         +=
+30      IDENTIFIER          contador
+30      SEMICOLON           ;
+31      IDENTIFIER          contador
+31      INCREMENT           ++
+31      SEMICOLON           ;
+32      RBRACE              }
+34      IDENTIFIER          promedio
+34      ASSIGN              =
+34      IDENTIFIER          suma
+34      DIVIDE              /
+34      IDENTIFIER          numero
+34      SEMICOLON           ;
+36      COUT                cout
+36      STREAM_OUT          <<
+36      STRING_LITERAL      "Suma: "
+36      STREAM_OUT          <<
+36      IDENTIFIER          suma
+36      STREAM_OUT          <<
+36      ENDL                endl
+36      SEMICOLON           ;
+37      COUT                cout
+37      STREAM_OUT          <<
+37      STRING_LITERAL      "Promedio: "
+37      STREAM_OUT          <<
+37      IDENTIFIER          promedio
+37      STREAM_OUT          <<
+37      ENDL                endl
+37      SEMICOLON           ;
+39      FOR                 for
+39      LPAREN              (
+39      INT                 int
+39      IDENTIFIER          i
+39      ASSIGN              =
+39      NUMBER_INT          0
+39      SEMICOLON           ;
+39      IDENTIFIER          i
+39      LT                  <
+39      NUMBER_INT          3
+39      SEMICOLON           ;
+39      IDENTIFIER          i
+39      INCREMENT           ++
+39      RPAREN              )
+39      LBRACE              {
+40      COUT                cout
+40      STREAM_OUT          <<
+40      STRING_LITERAL      "Iteracion: "
+40      STREAM_OUT          <<
+40      IDENTIFIER          i
+40      STREAM_OUT          <<
+40      ENDL                endl
+40      SEMICOLON           ;
+41      RBRACE              }
+43      IF                  if
+43      LPAREN              (
+43      IDENTIFIER          opcion
+43      EQ                  ==
+43      CHAR_LITERAL        'S'
+43      OR                  ||
+43      IDENTIFIER          opcion
+43      EQ                  ==
+43      CHAR_LITERAL        's'
+43      RPAREN              )
+43      LBRACE              {
+44      COUT                cout
+44      STREAM_OUT          <<
+44      STRING_LITERAL      "Proceso finalizado correctamente"
+44      STREAM_OUT          <<
+44      ENDL                endl
+44      SEMICOLON           ;
+45      RBRACE              }
+47      RETURN              return
+47      NUMBER_INT          0
+47      SEMICOLON           ;
+48      RBRACE              }
+
+ERRORES (0):
+------------------------------------------------------------
+Ningun error detectado.
