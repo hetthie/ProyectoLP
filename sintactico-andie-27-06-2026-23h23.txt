@@ -1,0 +1,56 @@
+============================================================
+ANALIZADOR SINTACTICO - C++
+Estudiante: andie
+Fecha y hora: 27/06/2026 23:23:16
+============================================================
+
+CODIGO FUENTE ANALIZADO:
+------------------------------------------------------------
+// Algoritmo de ejemplo para probar el analizador lexico
+#include <iostream
+using namespace std;
+
+class Persona {
+    private:
+        int edad;
+        string nombre;
+    public:
+        void mostrar() {
+            cout << "Nombre: " << andie << endl;
+        }
+};
+
+int main() {
+    int contador = 0;0hola
+    float promedio = 18.5;
+    bool activo = true;
+    char letra = 'A';
+
+    /* Bloque de comentario
+       de varias lineas */
+    if (contador == 0 && activo) {
+        contador++;
+        promedio += 1.5;
+    } else {
+        contador--;
+    }
+
+    for (int i = 0; i < 10; i++) {
+        cout << i << endl;
+    }
+
+    while (contador <= 5) {
+        contador = contador + 1;
+    }
+
+    return 0;
+}
+------------------------------------------------------------
+
+RESULTADO DEL ANALISIS SINTACTICO:
+------------------------------------------------------------
+Se encontraron errores sintacticos:
+
+ERRORES (1):
+------------------------------------------------------------
+Error sintactico: token inesperado 'hola' (tipo: IDENTIFIER) en la linea 16
